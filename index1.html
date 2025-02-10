@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReeBootz - Mobile & Laptop Repair Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #facc15 0%, #eab308 100%);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        .testimonial-slider {
+            scroll-behavior: smooth;
+        }
+        .slide-in {
+            animation: slideIn 0.5s ease forwards;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+	
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/widecanvas-d0dd4.appspot.com/o/logos%2FReeBootz.jpg?alt=media&token=70e4d028-5561-480f-b7df-5766326f1720" alt="ReeBootz Logo" class="h-16">
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600">Home</a>
+                    <a href="#services" class="text-gray-700 hover:text-blue-600">Services</a>
+                    <a href="#how-it-works" class="text-gray-700 hover:text-blue-600">How It Works</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-blue-600">Testimonials</a>
+                    <a href="#faq" class="text-gray-700 hover:text-blue-600">FAQ</a>
+                    <a href="#book" class="bg-yellow-400 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+                        Book Now
+                    </a>
+			
+                </div>
+                <button class="md:hidden text-gray-700" onclick="toggleMenu()">
+                    <i class="bi bi-list text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden bg-white pb-4 hidden">
+            <a href="#home" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Home</a>
+            <a href="#services" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Services</a>
+            <a href="#how-it-works" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">How It Works</a>
+            <a href="#testimonials" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Testimonials</a>
+            <a href="#faq" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">FAQ</a>
+            <a href="#book" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Book Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient pt-24 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-white">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">We Fix Your Mobile At Your Convenience</h1>
+                <p class="text-lg md:text-xl mb-8">ReeBootz is India's most trusted gadget repair portal, offering doorstep repair services for smartphones & tablets.</p>
+                <a href="#book" class="bg-white text-yellow-400 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition duration-300">Book Repair Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="text-center p-6 service-card">
+                <i class="bi bi-shield-check text-4xl text-yellow-400"></i>
+                <h3 class="text-xl font-semibold mt-4">Upto 6 Months Warranty</h3>
+                <p class="text-gray-600 mt-2">Peace of mind with our extended warranty coverage</p>
+            </div>
+            <div class="text-center p-6 service-card">
+                <i class="bi bi-house-door text-4xl text-yellow-400"></i>
+                <h3 class="text-xl font-semibold mt-4">Doorstep Repair</h3>
+                <p class="text-gray-600 mt-2">Expert repairs at your convenience</p>
+            </div>
+            <div class="text-center p-6 service-card">
+                <i class="bi bi-person-check text-4xl text-yellow-400"></i>
+                <h3 class="text-xl font-semibold mt-4">Certified Technicians</h3>
+                <p class="text-gray-600 mt-2">Skilled professionals you can trust</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">How It Works</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="flex justify-center">
+                    <img src="https://media.istockphoto.com/id/492444245/vector/businessman-use-smartphone-and-laptop.jpg?s=612x612&w=0&k=20&c=SJn5i3u95219CMXpyEhlZDND0JVyek1FDqnzLhPRojU=" alt="How It Works" class="w-full max-w-md">
+                </div>
+                <div class="space-y-8">
+                    <div class="flex items-start">
+                        <div class="bg-yellow-400 text-white rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0">
+                            <span class="text-xl font-bold">1</span>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-semibold">Book a Repair</h3>
+                            <p class="text-gray-600">Fill out our simple booking form or call us to schedule a repair at your convenience.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="bg-yellow-400 text-white rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0">
+                            <span class="text-xl font-bold">2</span>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-semibold">Expert Diagnosis</h3>
+                            <p class="text-gray-600">Our certified technician will visit your location, diagnose the issue, and provide a solution.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="bg-yellow-400 text-white rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0">
+                            <span class="text-xl font-bold">3</span>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-semibold">Get Your Device Repaired</h3>
+                            <p class="text-gray-600">We use high-quality parts and tools to fix your device efficiently, ensuring it works like new.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="bg-yellow-400 text-white rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0">
+                            <span class="text-xl font-bold">4</span>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-semibold">Enjoy Your Device</h3>
+                            <p class="text-gray-600">Once repaired, your device is tested and returned to you with a warranty for peace of mind.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Gallery -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Repair Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://www.vivoservicecenterinchennai.co.in/wp-content/uploads/2022/03/Vivo-Screen-Replacement-in-Chennai.jpg" alt="Mobile Repair" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold">Screen Replacement</h3>
+                        <p class="text-gray-600">Cracked or unresponsive screen? Get a professional screen replacement with high-quality parts to restore your phone’s look and touch sensitivity.</p>
+                    </div>
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://thelabrepair.com/wp-content/uploads/mobile-phone-with-water-damage-2048x1365.jpg" alt="Mobile Repair" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold">Water Damage Repair</h3>
+                        <p class="text-gray-600">Accidentally dropped your phone in water? Our expert technicians can diagnose and repair liquid damage, preventing further issues and restoring your device to working condition.</p>
+                    </div>
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://d3nevzfk7ii3be.cloudfront.net/igi/YXOHDrKW4IUoZcGh.full" alt="Mobile Repair" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold">Battery Replacement</h3>
+                        <p class="text-gray-600">Fast draining battery? Phone not holding charge? Replace your old battery with a new one for longer life and better performance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- And Many More Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">And Many More Services!</h2>
+            <p class="text-gray-600 text-lg mb-8">We offer a wide range of repair services to meet all your gadget needs. From software issues to hardware replacements, we’ve got you covered.</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <i class="bi bi-tools text-4xl text-yellow-400"></i>
+                    <h3 class="text-xl font-semibold mt-4">Software Fixes</h3>
+                    <p class="text-gray-600 mt-2">Resolve software glitches, updates, and more.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <i class="bi bi-camera text-4xl text-yellow-400"></i>
+                    <h3 class="text-xl font-semibold mt-4">Camera Repair</h3>
+                    <p class="text-gray-600 mt-2">Fix blurry or malfunctioning cameras.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <i class="bi bi-motherboard text-4xl text-yellow-400"></i>
+                    <h3 class="text-xl font-semibold mt-4">Motherboard Repair</h3>
+                    <p class="text-gray-600 mt-2">Expert solutions for motherboard issues.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <i class="bi bi-usb-plug text-4xl text-yellow-400"></i>
+                    <h3 class="text-xl font-semibold mt-4">Charging Port Repair</h3>
+                    <p class="text-gray-600 mt-2">Fix faulty charging ports quickly.</p>
+                </div>
+            </div>
+            <a href="#book" class="inline-block mt-12 bg-yellow-400 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition duration-300">Explore All Services</a>
+        </div>
+    </section>
+
+    <!-- Brands We Repair Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Brands We Repair</h2>
+            <p class="text-gray-600 text-center mb-8">We repair a wide range of brands, including but not limited to:</p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <!-- Brand Logos or Names -->
+                <div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center">
+                    <img src="https://cdn.freebiesupply.com/images/large/2x/apple-logo-transparent.png" alt="Apple" class="h-12">
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center">
+                    <img src="https://static.vecteezy.com/system/resources/previews/019/909/578/non_2x/mi-xiaomi-transparent-mi-xiaomi-free-free-png.png" alt="MI" class="h-12">
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center">
+                    <img src="https://1000logos.net/wp-content/uploads/2022/12/POCO-Emblem.png" alt="POCO" class="h-12">
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center">
+                    <img src="https://pngimg.com/uploads/samsung_logo/samsung_logo_PNG16.png" alt="Samsung" class="h-12">
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center">
+                    <img src="https://cdn.freebiesupply.com/logos/large/2x/vivo-1-logo-png-transparent.png" alt="Vivo" class="h-12">
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center">
+                    <img src="https://www.freepnglogos.com/uploads/google-logo-png-hd-11.png" alt="Google" class="h-12">
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/OPPO_Logo_wiki.png" alt="Oppo" class="h-12">
+                </div>
+		<div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center">
+                    <img src="https://mediaresource.sfo2.digitaloceanspaces.com/wp-content/uploads/2024/04/29200142/Motorola-logo-C3DDCBA822-seeklogo.com.png" alt="Motorola" class="h-12">
+                </div>
+		<div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Realme_logo.png" alt="Realme" class="h-12">
+                </div>
+		<div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center">
+                    <img src="https://download.logo.wine/logo/Honor_(brand)/Honor_(brand)-Logo.wine.png" alt="Honor" class="h-12">
+                </div>
+		<div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center">
+                    <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/oneplus-logo.png" alt="OnePlus" class="h-12">
+                </div>
+		<div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/AsusTek-black-logo.png" alt="Asus" class="h-12">
+                </div>
+                <!-- Add more brands as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+<section id="testimonials" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Trusted by 27+ Lakh Happy Customers</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Testimonial 1 -->
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                <div class="flex items-center mb-4">
+                    <i class="bi bi-chat-quote text-3xl text-yellow-400 mr-4"></i>
+                    <p class="text-gray-600 italic">"Great service and a warranty to back it. My Samsung M31 is back in action. Fast, friendly, and effective service!"</p>
+                </div>
+                <div class="flex items-center">
+                    <div class="bg-yellow-400 text-white rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0">
+                        <i class="bi bi-person text-xl"></i>
+                    </div>
+                    <div class="ml-4">
+                        <p class="font-semibold">Ramanjeet Singh</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                <div class="flex items-center mb-4">
+                    <i class="bi bi-chat-quote text-3xl text-yellow-400 mr-4"></i>
+                    <p class="text-gray-600 italic">"Rebootz exceeded my expectations. Quick response, skilled technicians, and my Oppo F17 Pro is as good as new!"</p>
+                </div>
+                <div class="flex items-center">
+                    <div class="bg-yellow-400 text-white rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0">
+                        <i class="bi bi-person text-xl"></i>
+                    </div>
+                    <div class="ml-4">
+                        <p class="font-semibold">Saroj Singh</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                <div class="flex items-center mb-4">
+                    <i class="bi bi-chat-quote text-3xl text-yellow-400 mr-4"></i>
+                    <p class="text-gray-600 italic">"Solved my Proximity Sensor issue in iPhone 15 with precision. Thank you for the speedy service!"</p>
+                </div>
+                <div class="flex items-center">
+                    <div class="bg-yellow-400 text-white rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0">
+                        <i class="bi bi-person text-xl"></i>
+                    </div>
+                    <div class="ml-4">
+                        <p class="font-semibold">Manik Batra</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                <div class="flex items-center mb-4">
+                    <i class="bi bi-chat-quote text-3xl text-yellow-400 mr-4"></i>
+                    <p class="text-gray-600 italic">"Check turnaround and excellent work. Cashtly fixed my Realme 10 Pro in no time. Highly recommended!"</p>
+                </div>
+                <div class="flex items-center">
+                    <div class="bg-yellow-400 text-white rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0">
+                        <i class="bi bi-person text-xl"></i>
+                    </div>
+                    <div class="ml-4">
+                        <p class="font-semibold">Sakshi Bishi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+   <!-- Modern Minimal FAQ Section -->
+<section id="faq" class="py-16 bg-gray-50">
+  <div class="max-w-5xl mx-auto px-4">
+    <!-- Section Title -->
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
+      Frequently Asked Questions
+    </h2>
+    <div class="space-y-4">
+      <!-- FAQ Item 1 -->
+      <div class="border border-gray-200 rounded-lg shadow-sm">
+        <button type="button"
+          class="w-full flex justify-between items-center px-6 py-4 text-left focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          onclick="toggleFaq(this)">
+          <span class="font-medium text-gray-800">
+            How does ReeBootz ensure the quality of its mobile repair services?
+          </span>
+          <!-- Chevron Icon (rotates on toggle) -->
+          <svg class="w-5 h-5 text-yellow-400 transition-transform duration-300 transform"
+            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="px-6 py-4 border-t border-gray-200 hidden">
+          <p class="text-gray-600">
+            At ReeBootz, we use high-quality parts, employ certified technicians, and follow strict repair protocols.
+            Each device goes through thorough testing before and after the repair to ensure top-notch service.
+          </p>
+        </div>
+      </div>
+      <!-- FAQ Item 2 -->
+      <div class="border border-gray-200 rounded-lg shadow-sm">
+        <button type="button"
+          class="w-full flex justify-between items-center px-6 py-4 text-left focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          onclick="toggleFaq(this)">
+          <span class="font-medium text-gray-800">
+            How long does a typical repair take?
+          </span>
+          <svg class="w-5 h-5 text-yellow-400 transition-transform duration-300 transform"
+            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="px-6 py-4 border-t border-gray-200 hidden">
+          <p class="text-gray-600">
+            Most repairs, like screen or battery replacements, are completed within 30 minutes to 1 hour.
+            Complex repairs, such as water damage or motherboard issues, may take 24-48 hours.
+          </p>
+        </div>
+      </div>
+      <!-- FAQ Item 3 -->
+      <div class="border border-gray-200 rounded-lg shadow-sm">
+        <button type="button"
+          class="w-full flex justify-between items-center px-6 py-4 text-left focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          onclick="toggleFaq(this)">
+          <span class="font-medium text-gray-800">
+            Do you offer a warranty on repairs?
+          </span>
+          <svg class="w-5 h-5 text-yellow-400 transition-transform duration-300 transform"
+            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="px-6 py-4 border-t border-gray-200 hidden">
+          <p class="text-gray-600">
+            Yes! We provide a 30 to 90-day warranty (depending on the repair) to cover any defects in parts or workmanship.
+          </p>
+        </div>
+      </div>
+      <!-- FAQ Item 4 -->
+      <div class="border border-gray-200 rounded-lg shadow-sm">
+        <button type="button"
+          class="w-full flex justify-between items-center px-6 py-4 text-left focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          onclick="toggleFaq(this)">
+          <span class="font-medium text-gray-800">
+            Can I get my phone repaired at home?
+          </span>
+          <svg class="w-5 h-5 text-yellow-400 transition-transform duration-300 transform"
+            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="px-6 py-4 border-t border-gray-200 hidden">
+          <p class="text-gray-600">
+            Yes! We offer on-site repair services for certain issues like screen and battery replacements.
+            Contact us to check availability in your area.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="book" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Book a Mobile Repair</h2>
+            <p class="text-gray-600 text-center mb-12">Fill out the form below, and we’ll get back to you shortly to schedule your repair.</p>
+            <div class="max-w-2xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+                <form class="p-8 space-y-6">
+                    <div class="relative">
+                        <label class="block text-gray-700 mb-2">Your Name</label>
+                        <div class="flex items-center border rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-blue-600">
+                            <i class="bi bi-person text-gray-500"></i>
+                            <input type="text" class="w-full pl-3 focus:outline-none" placeholder="Enter your name" required>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <label class="block text-gray-700 mb-2">Phone Number</label>
+                        <div class="flex items-center border rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-blue-600">
+                            <i class="bi bi-phone text-gray-500"></i>
+                            <input type="tel" class="w-full pl-3 focus:outline-none" placeholder="Enter your phone number" required>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <label class="block text-gray-700 mb-2">Device Type</label>
+                        <div class="flex items-center border rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-blue-600">
+                            <i class="bi bi-device-phone text-gray-500"></i>
+                            <select class="w-full pl-3 bg-transparent focus:outline-none" required>
+                                <option value="" disabled selected>Select your device</option>
+                                <option value="smartphone">Smartphone</option>
+                                <option value="tablet">Tablet</option>
+                                <option value="laptop">Laptop</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <label class="block text-gray-700 mb-2">Device Brand and Model</label>
+                        <div class="flex items-center border rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-blue-600">
+                            <i class="bi bi-tag text-gray-500"></i>
+                            <input type="text" class="w-full pl-3 focus:outline-none" placeholder="Example: Samsung Galaxy S21" required>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <label class="block text-gray-700 mb-2">What's the issue?</label>
+                        <div class="flex items-center border rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-blue-600">
+                            <i class="bi bi-tools text-gray-500"></i>
+                            <select class="w-full pl-3 bg-transparent focus:outline-none" required>
+                                <option value="" disabled selected>Select the issue</option>
+                                <option value="screen">Screen Replacement</option>
+                                <option value="battery">Battery Replacement</option>
+                                <option value="water-damage">Water Damage Repair</option>
+                                <option value="charging">Charging Port Issue</option>
+                                <option value="software">Software/Performance Issue</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <label class="block text-gray-700 mb-2">Issue Description</label>
+                        <div class="flex items-center border rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-blue-600">
+                            <i class="bi bi-chat-left-text text-gray-500"></i>
+                            <textarea class="w-full pl-3 focus:outline-none" rows="4" placeholder="Describe the issue in detail" required></textarea>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <label class="block text-gray-700 mb-2">Preferred Date & Time</label>
+                        <div class="flex items-center border rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-blue-600">
+                            <i class="bi bi-calendar text-gray-500"></i>
+                            <input type="datetime-local" class="w-full pl-3 focus:outline-none" required>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <label class="block text-gray-700 mb-2">Location</label>
+                        <div class="flex items-center border rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-blue-600">
+                            <i class="bi bi-geo-alt text-gray-500"></i>
+                            <input type="text" class="w-full pl-3 focus:outline-none" placeholder="Enter your address or location" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-700 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105 flex items-center justify-center">
+                        <i class="bi bi-calendar-check mr-2"></i>
+                        Book Repair Now
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+		<!-- Chat Widget Toggle Button -->
+<button id="chat-toggle-button" onclick="toggleChat()" class="fixed bottom-5 right-5 bg-blue-600 text-white w-12 h-12 rounded-full shadow-lg hover:bg-blue-700 flex items-center justify-center z-50">
+  <i class="bi bi-chat-dots text-2xl"></i>
+</button>
+
+<!-- Chat Widget -->
+<div id="chat-widget" class="fixed bottom-5 right-5 w-80 bg-white shadow-lg rounded-lg overflow-hidden hidden z-50">
+  <!-- Header -->
+  <div class="bg-blue-600 text-white px-4 py-2 flex justify-between items-center">
+    <span class="font-semibold">Chat with us</span>
+    <button onclick="toggleChat()">
+      <i class="bi bi-x-lg"></i>
+    </button>
+  </div>
+  <!-- Chat Conversation -->
+  <div id="chat-content" class="p-4 h-64 overflow-y-auto space-y-2">
+    <!-- AI can greet the user when the chat opens -->
+    <div class="text-left">
+      <span class="bg-gray-200 text-gray-700 px-3 py-2 rounded inline-block">Hi there! How can I help you today?</span>
+    </div>
+  </div>
+  <!-- Input Area -->
+  <div class="p-4 border-t">
+    <input id="chat-input" type="text" placeholder="Type your message..." class="w-full border rounded px-2 py-1 focus:outline-none" onkeypress="if(event.key === 'Enter') sendMessage()">
+    <button onclick="sendMessage()" class="mt-2 w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition duration-200">
+      Send
+    </button>
+  </div>
+</div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">ReeBootz</h3>
+                    <p class="text-gray-400">Your trusted partner for mobile and laptop repairs.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Contact</h3>
+                    <p class="text-gray-400">Email: info@reebootz.com</p>
+                    <p class="text-gray-400">Phone: +91 845-888-1213</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your booking request. We will contact you shortly!');
+            this.reset();
+        });
+    </script>
+
+<script>
+  function toggleFaq(button) {
+    const answerDiv = button.nextElementSibling;
+    answerDiv.classList.toggle('hidden');
+
+    // Toggle the rotation of the SVG chevron
+    const svgIcon = button.querySelector('svg');
+    svgIcon.classList.toggle('rotate-180');
+  }
+</script>
+
+	<script>
+  // Toggle the visibility of the chat widget and the toggle button
+  function toggleChat() {
+    const chatWidget = document.getElementById('chat-widget');
+    const chatToggleButton = document.getElementById('chat-toggle-button');
+    if (chatWidget.classList.contains('hidden')) {
+      chatWidget.classList.remove('hidden');
+      chatToggleButton.classList.add('hidden');
+    } else {
+      chatWidget.classList.add('hidden');
+      chatToggleButton.classList.remove('hidden');
+    }
+  }
+
+  // Handle sending a message
+  function sendMessage() {
+    const inputField = document.getElementById('chat-input');
+    const message = inputField.value.trim();
+    if (message === '') return;
+    
+    appendMessage('You', message);
+    inputField.value = '';
+
+    // Simulate a short delay before the AI responds
+    setTimeout(() => {
+      const aiResponse = getAIResponse(message);
+      appendMessage('AI', aiResponse);
+    }, 500);
+  }
+
+  // Append a message to the chat content area
+  function appendMessage(sender, message) {
+    const chatContent = document.getElementById('chat-content');
+    const messageDiv = document.createElement('div');
+    
+    if (sender === 'You') {
+      messageDiv.className = 'text-right';
+      messageDiv.innerHTML = `<span class="bg-blue-600 text-white px-3 py-2 rounded inline-block">${message}</span>`;
+    } else {
+      messageDiv.className = 'text-left';
+      messageDiv.innerHTML = `<span class="bg-gray-200 text-gray-700 px-3 py-2 rounded inline-block">${message}</span>`;
+    }
+    
+    chatContent.appendChild(messageDiv);
+    chatContent.scrollTop = chatContent.scrollHeight;
+  }
+
+  // A simple AI response function (you can replace this with a call to an AI API)
+  function getAIResponse(input) {
+    input = input.toLowerCase();
+    
+    if (input.includes('repair')) {
+      return "We offer a wide range of repair services including screen replacement, battery replacement, water damage repair, and more. How can we assist you?";
+    } else if (input.includes('screen')) {
+      return "Our screen replacement service uses high-quality parts and expert technicians. Would you like to book a repair?";
+    } else if (input.includes('battery')) {
+      return "Battery replacement is one of our specialties to keep your device running longer. Need more details?";
+    } else if (input.includes('water')) {
+      return "If your device has water damage, our certified technicians can help diagnose and repair it promptly.";
+    } else if (input.includes('warranty')) {
+      return "We provide up to 6 months warranty on our repair services for your peace of mind.";
+    } else if (input.includes('how it works')) {
+      return "Simply book a repair, our technician will visit your location, diagnose the issue, repair your device, and provide a warranty.";
+    } else if (input.includes('contact') || input.includes('whatsapp')) {
+      return "You can contact us via WhatsApp at +91 845-888-1213, email at info@reebootz.com, or simply call us at the same number.";
+    } else if (input.includes('thank')) {
+      return "You're welcome! Is there anything else I can help you with?";
+    } else {
+      return "I'm here to help! Could you please provide more details about your query?";
+    }
+  }
+</script>
+</body>
+</html>

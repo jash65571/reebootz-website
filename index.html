@@ -513,10 +513,11 @@
         </div>
     </section>
 
-		<!-- Chat Widget Toggle Button -->
+<!-- Chat Widget Toggle Button -->
 <button id="chat-toggle-button" onclick="toggleChat()" class="fixed bottom-5 right-5 bg-blue-600 text-white w-12 h-12 rounded-full shadow-lg hover:bg-blue-700 flex items-center justify-center z-50">
   <i class="bi bi-chat-dots text-2xl"></i>
 </button>
+
 
 <!-- Chat Widget -->
 <div id="chat-widget" class="fixed bottom-5 right-5 w-80 bg-white shadow-lg rounded-lg overflow-hidden hidden z-50">
@@ -529,17 +530,27 @@
   </div>
   <!-- Chat Conversation -->
   <div id="chat-content" class="p-4 h-64 overflow-y-auto space-y-2">
-    <!-- AI can greet the user when the chat opens -->
+    <!-- AI greeting with WhatsApp option -->
     <div class="text-left">
-      <span class="bg-gray-200 text-gray-700 px-3 py-2 rounded inline-block">Hi there! How can I help you today?</span>
+      <span class="bg-gray-200 text-gray-700 px-3 py-2 rounded inline-block">
+        Hi there! How can I help you today?  
+        <br>
+        Prefer WhatsApp? <a href="https://wa.me/918458881213?text=Hello%20ReeBootz" target="_blank" class="text-blue-600 underline">Chat via WhatsApp</a>.
+      </span>
     </div>
   </div>
-  <!-- Input Area -->
+    <!-- Input Area -->
   <div class="p-4 border-t">
     <input id="chat-input" type="text" placeholder="Type your message..." class="w-full border rounded px-2 py-1 focus:outline-none" onkeypress="if(event.key === 'Enter') sendMessage()">
     <button onclick="sendMessage()" class="mt-2 w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition duration-200">
       Send
     </button>
+    <!-- Persistent WhatsApp Connect Button -->
+    <div class="mt-2 text-center">
+      <a href="https://wa.me/918458881213?text=Hello%20ReeBootz" target="_blank" class="inline-block bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded transition duration-200">
+        Connect via WhatsApp
+      </a>
+    </div>
   </div>
 </div>
 
@@ -654,10 +665,12 @@
     chatContent.scrollTop = chatContent.scrollHeight;
   }
 
-  // A simple AI response function (you can replace this with a call to an AI API)
+  // A simple AI response function (replace with an AI API if needed)
   function getAIResponse(input) {
     input = input.toLowerCase();
-    
+    // WhatsApp click-to-chat link with your number and default text
+    const waLink = '<a href="https://wa.me/918458881213?text=Hello%20ReeBootz" target="_blank" class="text-blue-600 underline">Chat via WhatsApp</a>';
+
     if (input.includes('repair')) {
       return "We offer a wide range of repair services including screen replacement, battery replacement, water damage repair, and more. How can we assist you?";
     } else if (input.includes('screen')) {
@@ -670,14 +683,27 @@
       return "We provide up to 6 months warranty on our repair services for your peace of mind.";
     } else if (input.includes('how it works')) {
       return "Simply book a repair, our technician will visit your location, diagnose the issue, repair your device, and provide a warranty.";
-    } else if (input.includes('contact') || input.includes('whatsapp')) {
-      return "You can contact us via WhatsApp at +91 845-888-1213, email at info@reebootz.com, or simply call us at the same number.";
-    } else if (input.includes('thank')) {
+    } else if (input.includes('contact')) {
+      return `You can reach us via WhatsApp at +91 845-888-1213, email at info@reebootz.com, or call us at the same number. ${waLink}`;
+    } else if (input.includes('whatsapp')) {
+      return `For quick assistance, feel free to ${waLink}.`;
+    } else if (input.includes('price') || input.includes('cost')) {
+      return "Our pricing depends on the specific repair required. Please share your device model and issue, and we'll provide a detailed quote.";
+    } else if (input.includes('appointment') || input.includes('book')) {
+      return "Booking a repair is easy! You can fill out our online form, or if you prefer, " + waLink + " to arrange an appointment.";
+    } else if (input.includes('hours') || input.includes('open')) {
+      return "Our technicians are available 24/7 for emergency repairs, and our support team is on hand from 9 AM to 9 PM for general inquiries.";
+    } else if (input.includes('location') || input.includes('area')) {
+      return "We offer doorstep repair services in many areas. Could you please share your location so we can confirm availability?";
+    } else if (input.includes('hi') || input.includes('hello')) {
+      return "Hello! How can I help you today? If you'd like quick support, you can also " + waLink + ".";
+    } else if (input.includes('thanks') || input.includes('thank you')) {
       return "You're welcome! Is there anything else I can help you with?";
     } else {
-      return "I'm here to help! Could you please provide more details about your query?";
+      return "I'm here to help! Could you please provide more details about your query? Alternatively, you can " + waLink + " for quick support.";
     }
   }
 </script>
+
 </body>
 </html>

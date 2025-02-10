@@ -427,91 +427,124 @@
   </div>
 </section>
 
-    <!-- Contact Section -->
-    <section id="book" class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-8">Book a Mobile Repair</h2>
-            <p class="text-gray-600 text-center mb-12">Fill out the form below, and we’ll get back to you shortly to schedule your repair.</p>
-            <div class="max-w-2xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
-                <form class="p-8 space-y-6">
-                    <div class="relative">
-                        <label class="block text-gray-700 mb-2">Your Name</label>
-                        <div class="flex items-center border rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-blue-600">
-                            <i class="bi bi-person text-gray-500"></i>
-                            <input type="text" class="w-full pl-3 focus:outline-none" placeholder="Enter your name" required>
-                        </div>
-                    </div>
-                    <div class="relative">
-                        <label class="block text-gray-700 mb-2">Phone Number</label>
-                        <div class="flex items-center border rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-blue-600">
-                            <i class="bi bi-phone text-gray-500"></i>
-                            <input type="tel" class="w-full pl-3 focus:outline-none" placeholder="Enter your phone number" required>
-                        </div>
-                    </div>
-                    <div class="relative">
-                        <label class="block text-gray-700 mb-2">Device Type</label>
-                        <div class="flex items-center border rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-blue-600">
-                            <i class="bi bi-device-phone text-gray-500"></i>
-                            <select class="w-full pl-3 bg-transparent focus:outline-none" required>
-                                <option value="" disabled selected>Select your device</option>
-                                <option value="smartphone">Smartphone</option>
-                                <option value="tablet">Tablet</option>
-                                <option value="laptop">Laptop</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="relative">
-                        <label class="block text-gray-700 mb-2">Device Brand and Model</label>
-                        <div class="flex items-center border rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-blue-600">
-                            <i class="bi bi-tag text-gray-500"></i>
-                            <input type="text" class="w-full pl-3 focus:outline-none" placeholder="Example: Samsung Galaxy S21" required>
-                        </div>
-                    </div>
-                    <div class="relative">
-                        <label class="block text-gray-700 mb-2">What's the issue?</label>
-                        <div class="flex items-center border rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-blue-600">
-                            <i class="bi bi-tools text-gray-500"></i>
-                            <select class="w-full pl-3 bg-transparent focus:outline-none" required>
-                                <option value="" disabled selected>Select the issue</option>
-                                <option value="screen">Screen Replacement</option>
-                                <option value="battery">Battery Replacement</option>
-                                <option value="water-damage">Water Damage Repair</option>
-                                <option value="charging">Charging Port Issue</option>
-                                <option value="software">Software/Performance Issue</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="relative">
-                        <label class="block text-gray-700 mb-2">Issue Description</label>
-                        <div class="flex items-center border rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-blue-600">
-                            <i class="bi bi-chat-left-text text-gray-500"></i>
-                            <textarea class="w-full pl-3 focus:outline-none" rows="4" placeholder="Describe the issue in detail" required></textarea>
-                        </div>
-                    </div>
-                    <div class="relative">
-                        <label class="block text-gray-700 mb-2">Preferred Date & Time</label>
-                        <div class="flex items-center border rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-blue-600">
-                            <i class="bi bi-calendar text-gray-500"></i>
-                            <input type="datetime-local" class="w-full pl-3 focus:outline-none" required>
-                        </div>
-                    </div>
-                    <div class="relative">
-                        <label class="block text-gray-700 mb-2">Location</label>
-                        <div class="flex items-center border rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-blue-600">
-                            <i class="bi bi-geo-alt text-gray-500"></i>
-                            <input type="text" class="w-full pl-3 focus:outline-none" placeholder="Enter your address or location" required>
-                        </div>
-                    </div>
-                    <button type="submit" class="w-full bg-blue-700 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105 flex items-center justify-center">
-                        <i class="bi bi-calendar-check mr-2"></i>
-                        Book Repair Now
-                    </button>
-                </form>
+   <!-- Book a Mobile Repair Section -->
+<section id="book" class="py-16 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Book a Mobile Repair</h2>
+      <p class="text-gray-600 mt-4">
+        Fill out the form below, and we’ll get back to you shortly to schedule your repair.
+      </p>
+    </div>
+    <!-- Form Container -->
+    <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+      <form class="p-8 space-y-6">
+        <!-- Row 1: Name & Phone -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Your Name -->
+          <div class="relative">
+            <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+            <div class="flex items-center border border-gray-300 rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-yellow-400">
+              <i class="bi bi-person text-gray-500"></i>
+              <input type="text" id="name" name="name" placeholder="Enter your name" class="w-full pl-3 focus:outline-none" required>
             </div>
+          </div>
+          <!-- Phone Number -->
+          <div class="relative">
+            <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+            <div class="flex items-center border border-gray-300 rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-yellow-400">
+              <i class="bi bi-phone text-gray-500"></i>
+              <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" class="w-full pl-3 focus:outline-none" required>
+            </div>
+          </div>
         </div>
-    </section>
+
+        <!-- Row 2: Device Type & Brand/Model -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Device Type -->
+          <div class="relative">
+            <label for="device-type" class="block text-gray-700 font-medium mb-2">Device Type</label>
+            <div class="flex items-center border border-gray-300 rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-yellow-400">
+              <i class="bi bi-device-phone text-gray-500"></i>
+              <select id="device-type" name="device-type" class="w-full pl-3 bg-transparent focus:outline-none" required>
+                <option value="" disabled selected>Select your device</option>
+                <option value="smartphone">Smartphone</option>
+                <option value="tablet">Tablet</option>
+                <option value="laptop">Laptop</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          <!-- Device Brand and Model -->
+          <div class="relative">
+            <label for="brand-model" class="block text-gray-700 font-medium mb-2">Device Brand and Model</label>
+            <div class="flex items-center border border-gray-300 rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-yellow-400">
+              <i class="bi bi-tag text-gray-500"></i>
+              <input type="text" id="brand-model" name="brand-model" placeholder="Example: Samsung Galaxy S21" class="w-full pl-3 focus:outline-none" required>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 3: Issue Type & Issue Description -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- What's the Issue? -->
+          <div class="relative">
+            <label for="issue-type" class="block text-gray-700 font-medium mb-2">What's the issue?</label>
+            <div class="flex items-center border border-gray-300 rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-yellow-400">
+              <i class="bi bi-tools text-gray-500"></i>
+              <select id="issue-type" name="issue-type" class="w-full pl-3 bg-transparent focus:outline-none" required>
+                <option value="" disabled selected>Select the issue</option>
+                <option value="screen">Screen Replacement</option>
+                <option value="battery">Battery Replacement</option>
+                <option value="water-damage">Water Damage Repair</option>
+                <option value="charging">Charging Port Issue</option>
+                <option value="software">Software/Performance Issue</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          <!-- Issue Description -->
+          <div class="relative">
+            <label for="issue-desc" class="block text-gray-700 font-medium mb-2">Issue Description</label>
+            <div class="flex items-start border border-gray-300 rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-yellow-400">
+              <i class="bi bi-chat-left-text text-gray-500 mt-1"></i>
+              <textarea id="issue-desc" name="issue-desc" rows="4" placeholder="Describe the issue in detail" class="w-full pl-3 focus:outline-none" required></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 4: Preferred Date & Time & Location -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Preferred Date & Time -->
+          <div class="relative">
+            <label for="date-time" class="block text-gray-700 font-medium mb-2">Preferred Date & Time</label>
+            <div class="flex items-center border border-gray-300 rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-yellow-400">
+              <i class="bi bi-calendar text-gray-500"></i>
+              <input type="datetime-local" id="date-time" name="date-time" class="w-full pl-3 focus:outline-none" required>
+            </div>
+          </div>
+          <!-- Location -->
+          <div class="relative">
+            <label for="location" class="block text-gray-700 font-medium mb-2">Location</label>
+            <div class="flex items-center border border-gray-300 rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-yellow-400">
+              <i class="bi bi-geo-alt text-gray-500"></i>
+              <input type="text" id="location" name="location" placeholder="Enter your address or location" class="w-full pl-3 focus:outline-none" required>
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div>
+          <button type="submit" class="w-full bg-yellow-400 text-white py-3 rounded-lg hover:bg-yellow-500 transition duration-300 transform hover:scale-105 flex items-center justify-center">
+            <i class="bi bi-calendar-check mr-2"></i>
+            Book Repair Now
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
 
 <!-- Chat Widget Toggle Button -->
 <button id="chat-toggle-button" onclick="toggleChat()" class="fixed bottom-5 right-5 bg-blue-600 text-white w-12 h-12 rounded-full shadow-lg hover:bg-blue-700 flex items-center justify-center z-50">

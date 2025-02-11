@@ -494,119 +494,169 @@
   </section>
 
   <!-- Book a Mobile Repair Section -->
-  <section id="book" class="py-16 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4">
-      <!-- Section Header -->
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Book a Mobile Repair</h2>
-        <p class="text-gray-600 mt-4">
-          Fill out the form below, and we’ll get back to you shortly to schedule your repair.
-        </p>
-      </div>
-      <!-- Form Container -->
-      <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
-        <form class="p-8 space-y-6">
-          <!-- Row 1: Name & Phone -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <!-- Your Name -->
-            <div class="relative">
-              <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
-              <div class="flex items-center border border-gray-300 rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-yellow-400">
-                <i class="bi bi-person text-gray-500"></i>
-                <input type="text" id="name" name="name" placeholder="Enter your name" class="w-full pl-3 focus:outline-none" required />
-              </div>
-            </div>
-            <!-- Phone Number -->
-            <div class="relative">
-              <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
-              <div class="flex items-center border border-gray-300 rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-yellow-400">
-                <i class="bi bi-phone text-gray-500"></i>
-                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" class="w-full pl-3 focus:outline-none" required />
-              </div>
-            </div>
-          </div>
-          <!-- Row 2: Device Type & Brand/Model -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <!-- Device Type -->
-            <div class="relative">
-              <label for="device-type" class="block text-gray-700 font-medium mb-2">Device Type</label>
-              <div class="flex items-center border border-gray-300 rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-yellow-400">
-                <i class="bi bi-device-phone text-gray-500"></i>
-                <select id="device-type" name="device-type" class="w-full pl-3 bg-transparent focus:outline-none" required>
-                  <option value="" disabled selected>Select your device</option>
-                  <option value="smartphone">Smartphone</option>
-                  <option value="tablet">Tablet</option>
-                  <option value="laptop">Laptop</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-            </div>
-            <!-- Device Brand and Model -->
-            <div class="relative">
-              <label for="brand-model" class="block text-gray-700 font-medium mb-2">Device Brand and Model</label>
-              <div class="flex items-center border border-gray-300 rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-yellow-400">
-                <i class="bi bi-tag text-gray-500"></i>
-                <input type="text" id="brand-model" name="brand-model" placeholder="Example: Samsung Galaxy S21" class="w-full pl-3 focus:outline-none" required />
-              </div>
-            </div>
-          </div>
-          <!-- Row 3: Issue Type & Issue Description -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <!-- What's the Issue? -->
-            <div class="relative">
-              <label for="issue-type" class="block text-gray-700 font-medium mb-2">What's the issue?</label>
-              <div class="flex items-center border border-gray-300 rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-yellow-400">
-                <i class="bi bi-tools text-gray-500"></i>
-                <select id="issue-type" name="issue-type" class="w-full pl-3 bg-transparent focus:outline-none" required>
-                  <option value="" disabled selected>Select the issue</option>
-                  <option value="screen">Screen Replacement</option>
-                  <option value="battery">Battery Replacement</option>
-                  <option value="water-damage">Water Damage Repair</option>
-                  <option value="charging">Charging Port Issue</option>
-                  <option value="software">Software/Performance Issue</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-            </div>
-            <!-- Issue Description -->
-            <div class="relative">
-              <label for="issue-desc" class="block text-gray-700 font-medium mb-2">Issue Description</label>
-              <div class="flex items-start border border-gray-300 rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-yellow-400">
-                <i class="bi bi-chat-left-text text-gray-500 mt-1"></i>
-                <textarea id="issue-desc" name="issue-desc" rows="4" placeholder="Describe the issue in detail" class="w-full pl-3 focus:outline-none" required></textarea>
-              </div>
-            </div>
-          </div>
-          <!-- Row 4: Preferred Date & Time & Location -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <!-- Preferred Date & Time -->
-            <div class="relative">
-              <label for="date-time" class="block text-gray-700 font-medium mb-2">Preferred Date & Time</label>
-              <div class="flex items-center border border-gray-300 rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-yellow-400">
-                <i class="bi bi-calendar text-gray-500"></i>
-                <input type="datetime-local" id="date-time" name="date-time" class="w-full pl-3 focus:outline-none" required />
-              </div>
-            </div>
-            <!-- Location -->
-            <div class="relative">
-              <label for="location" class="block text-gray-700 font-medium mb-2">Location</label>
-              <div class="flex items-center border border-gray-300 rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-yellow-400">
-                <i class="bi bi-geo-alt text-gray-500"></i>
-                <input type="text" id="location" name="location" placeholder="Enter your address or location" class="w-full pl-3 focus:outline-none" required />
-              </div>
-            </div>
-          </div>
-          <!-- Submit Button -->
-          <div>
-            <button type="submit" class="w-full bg-yellow-400 text-white py-3 rounded-lg hover:bg-yellow-500 transition duration-300 transform hover:scale-105 flex items-center justify-center">
-              <i class="bi bi-calendar-check mr-2"></i>
-              Book Repair Now
-            </button>
-          </div>
-        </form>
-      </div>
+<!-- Book a Mobile Repair Section -->
+<section id="book" class="py-16 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Book a Mobile Repair</h2>
+      <p class="text-gray-600 mt-4">
+        Fill out the form below, and we’ll get back to you shortly to schedule your repair.
+      </p>
     </div>
-  </section>
+    <!-- Form Container -->
+    <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+      <form id="bookingForm" class="p-8 space-y-6">
+        <!-- Row 1: Name & Phone -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Your Name -->
+          <div class="relative">
+            <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+            <div class="flex items-center border border-gray-300 rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-yellow-400">
+              <i class="bi bi-person text-gray-500"></i>
+              <input type="text" id="name" name="name" placeholder="Enter your name" class="w-full pl-3 focus:outline-none" required />
+            </div>
+          </div>
+          <!-- Phone Number -->
+          <div class="relative">
+            <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+            <div class="flex items-center border border-gray-300 rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-yellow-400">
+              <i class="bi bi-phone text-gray-500"></i>
+              <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" class="w-full pl-3 focus:outline-none" required />
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2: Device Type, Brand & Model -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Device Type -->
+          <div class="relative">
+            <label for="device-type" class="block text-gray-700 font-medium mb-2">Device Type</label>
+            <div class="flex items-center border border-gray-300 rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-yellow-400">
+              <i class="bi bi-device-phone text-gray-500"></i>
+              <select id="device-type" name="device-type" class="w-full pl-3 bg-transparent focus:outline-none" required>
+                <option value="" disabled selected>Select your device</option>
+                <option value="smartphone">Smartphone</option>
+                <option value="tablet">Tablet</option>
+                <option value="laptop">Laptop</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          <!-- Brand (with cascading Model) -->
+          <div class="relative">
+            <label for="brand" class="block text-gray-700 font-medium mb-2">Brand</label>
+            <select id="brand" name="brand" class="w-full pl-3 bg-transparent border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-yellow-400" required>
+              <option value="" disabled selected>Select Brand</option>
+              <option value="Samsung">Samsung</option>
+              <option value="Apple">Apple</option>
+              <option value="Xiaomi">Xiaomi</option>
+              <option value="OnePlus">OnePlus</option>
+              <option value="Oppo">Oppo</option>
+              <option value="Vivo">Vivo</option>
+              <option value="Motorola">Motorola</option>
+              <option value="Nokia">Nokia</option>
+              <option value="Google">Google</option>
+              <option value="Huawei">Huawei</option>
+              <option value="LG">LG</option>
+              <option value="Realme">Realme</option>
+              <option value="Infinix">Infinix</option>
+              <option value="Asus">Asus</option>
+              <option value="Micromax">Micromax</option>
+              <option value="Other">Other</option>
+            </select>
+            <input type="text" id="brand-other" name="brand-other" placeholder="Please specify" class="mt-2 w-full pl-3 border border-gray-300 rounded-lg px-4 py-2 hidden" />
+          </div>
+          <div class="relative">
+            <label for="model" class="block text-gray-700 font-medium mb-2">Model</label>
+            <select id="model" name="model" class="w-full pl-3 bg-transparent border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-yellow-400" required>
+              <option value="" disabled selected>Select Model</option>
+            </select>
+            <input type="text" id="model-other" name="model-other" placeholder="Please specify" class="mt-2 w-full pl-3 border border-gray-300 rounded-lg px-4 py-2 hidden" />
+          </div>
+        </div>
+
+        <!-- Row 3: Problem Category (Main & Sub) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Main Problem Category -->
+          <div class="relative">
+            <label for="main-problem" class="block text-gray-700 font-medium mb-2">Main Problem Category</label>
+            <select id="main-problem" name="main-problem" class="w-full pl-3 bg-transparent border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-yellow-400" required>
+              <option value="" disabled selected>Select your problem category</option>
+              <option value="display">Display Problem</option>
+              <option value="power">Power Related Issue</option>
+              <option value="headphones">Headphones Not Working</option>
+              <option value="battery">Battery/Charging Issue</option>
+              <option value="sound">Sound Issue</option>
+              <option value="connection">Connection Problem</option>
+              <option value="data">Data Storage Issue</option>
+              <option value="camera">Camera Issue</option>
+              <option value="touch">Touch & Keypad Issue</option>
+              <option value="vibration">Vibration Issue</option>
+              <option value="network">Network Related Issue</option>
+              <option value="heating">Mobile Heating & Hanging Issue</option>
+              <option value="cosmetic">Cosmetic Problem</option>
+              <option value="other">Other</option>
+            </select>
+            <input type="text" id="main-problem-other" name="main-problem-other" placeholder="Please specify" class="mt-2 w-full pl-3 border border-gray-300 rounded-lg px-4 py-2 hidden" />
+          </div>
+          <!-- Problem Sub Category -->
+          <div class="relative">
+            <label for="sub-problem" class="block text-gray-700 font-medium mb-2">Problem Sub Category</label>
+            <select id="sub-problem" name="sub-problem" class="w-full pl-3 bg-transparent border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-yellow-400" required>
+              <option value="" disabled selected>Select sub category</option>
+            </select>
+            <input type="text" id="sub-problem-other" name="sub-problem-other" placeholder="Please specify" class="mt-2 w-full pl-3 border border-gray-300 rounded-lg px-4 py-2 hidden" />
+          </div>
+        </div>
+
+        <!-- Row 4: Issue Description -->
+        <div class="relative">
+          <label for="issue-desc" class="block text-gray-700 font-medium mb-2">Issue Description</label>
+          <div class="flex items-start border border-gray-300 rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-yellow-400">
+            <i class="bi bi-chat-left-text text-gray-500 mt-1"></i>
+            <textarea id="issue-desc" name="issue-desc" rows="4" placeholder="Describe the issue in detail" class="w-full pl-3 focus:outline-none" required></textarea>
+          </div>
+        </div>
+
+        <!-- Row 5: Preferred Date & Time & Location -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Preferred Date & Time -->
+          <div class="relative">
+            <label for="date-time" class="block text-gray-700 font-medium mb-2">Preferred Date & Time</label>
+            <div class="flex items-center border border-gray-300 rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-yellow-400">
+              <i class="bi bi-calendar text-gray-500"></i>
+              <input type="datetime-local" id="date-time" name="date-time" class="w-full pl-3 focus:outline-none" required />
+            </div>
+          </div>
+          <!-- Location -->
+          <div class="relative">
+            <label for="location" class="block text-gray-700 font-medium mb-2">Location</label>
+            <div class="flex items-center border border-gray-300 rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-yellow-400">
+              <i class="bi bi-geo-alt text-gray-500"></i>
+              <input type="text" id="location" name="location" placeholder="Enter your address or location" class="w-full pl-3 focus:outline-none" required />
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div>
+          <button type="submit" class="w-full bg-yellow-400 text-white py-3 rounded-lg hover:bg-yellow-500 transition duration-300 transform hover:scale-105 flex items-center justify-center">
+            <i class="bi bi-calendar-check mr-2"></i>
+            Book Repair Now
+          </button>
+        </div>
+
+        <!-- Price Estimate Message (Displayed below the button) -->
+        <div id="final-price-estimate" class="mt-4 text-sm text-gray-600 hidden"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+
+
 
   <!-- Chat Widget Toggle Button -->
   <button id="chat-toggle-button" onclick="toggleChat()" class="fixed bottom-5 right-5 bg-yellow-400 text-white w-12 h-12 rounded-full shadow-lg hover:bg-blue-700 flex items-center justify-center z-50">
@@ -802,5 +852,239 @@
       }
     }
   </script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Expanded Brand Mapping with more brands and models
+    const brandMapping = {
+      "Samsung": ["Galaxy S23 Ultra", "Galaxy S23+", "Galaxy S23", "Galaxy Note 20", "Galaxy A53", "Galaxy M33", "Galaxy F22", "Other"],
+      "Apple": ["iPhone 14 Pro Max", "iPhone 14 Pro", "iPhone 14", "iPhone 13 Pro Max", "iPhone 13", "iPhone SE (2022)", "Other"],
+      "Xiaomi": ["Mi 13 Pro", "Mi 13", "Redmi Note 12 Pro", "POCO X5 Pro", "Redmi 10", "Other"],
+      "OnePlus": ["OnePlus 11", "OnePlus 10T", "OnePlus Nord 2", "Other"],
+      "Oppo": ["Oppo Find X5 Pro", "Oppo Reno8 Pro", "Oppo A74", "Other"],
+      "Vivo": ["Vivo X80 Pro", "Vivo V23 Pro", "Vivo Y33s", "Other"],
+      "Motorola": ["Moto G Power (2023)", "Moto G Stylus (2023)", "Moto Edge 30", "Other"],
+      "Nokia": ["Nokia X20", "Nokia G21", "Other"],
+      "Google": ["Pixel 7 Pro", "Pixel 7", "Other"],
+      "Huawei": ["Huawei P50 Pro", "Huawei Mate 40 Pro", "Other"],
+      "LG": ["LG Velvet", "Other"],
+      "Realme": ["Realme GT 2 Pro", "Realme 9 Pro+", "Other"],
+      "Infinix": ["Infinix Note 12", "Other"],
+      "Asus": ["Asus ROG Phone 6", "Other"],
+      "Micromax": ["Micromax IN Note 1", "Other"]
+    };
+
+    // Problem Category Mapping
+    const problemMapping = {
+      "display": [
+        "No Display",
+        "Display Quality Not Good",
+        "Dot/Line On Display",
+        "Blank Display",
+        "Dust On Display",
+        "Display Crack/Damage",
+        "Display Liquid Damage",
+        "White Display",
+        "Other"
+      ],
+      "power": [
+        "No Power",
+        "Intermittent ON/OFF",
+        "Phone Dead - Physical Damage",
+        "Phone Dead - Liquid Damage",
+        "Other"
+      ],
+      "headphones": [
+        "No Sound In Headphones",
+        "Distorted Audio",
+        "Intermittent Sound",
+        "Low Sound In Headphones",
+        "Headphones Broken/Damaged",
+        "Other"
+      ],
+      "battery": [
+        "No Charging",
+        "Short Battery Life",
+        "Battery Swelling",
+        "Long Charging Time",
+        "Intermittent Charging",
+        "Adaptor/Data Cable Broken",
+        "Other"
+      ],
+      "sound": [
+        "No Receiver Sound",
+        "Howling/Echo Sound",
+        "Sound Too Low",
+        "No Speaker Sound",
+        "Intermittent Sound",
+        "Ringer Not Working",
+        "Other"
+      ],
+      "connection": [
+        "Wifi Not Working",
+        "Bluetooth Not Working",
+        "No Screen Mirroring",
+        "GPS Not Working",
+        "USB Not Working",
+        "Other"
+      ],
+      "data": [
+        "Data Erased Automatically",
+        "Memory Card Not Detected",
+        "Other"
+      ],
+      "camera": [
+        "Camera Not Working",
+        "No Video Recording",
+        "Flash Light Not Working",
+        "Front Camera Not Working",
+        "Spot/Dust On Camera",
+        "No Auto Focus",
+        "Poor Image Quality",
+        "Other"
+      ],
+      "touch": [
+        "Touch Not Working",
+        "Volume Key Not Working",
+        "Dial Pad/Keypad Not Working",
+        "Lock Key Not Working",
+        "Stylus Not Working",
+        "Touch Screen Damage",
+        "Other"
+      ],
+      "vibration": [
+        "No Vibration",
+        "Weak Vibration",
+        "Other"
+      ],
+      "network": [
+        "No Network",
+        "SIM Lock",
+        "No Incoming/Outgoing Call",
+        "Call Drop",
+        "Other"
+      ],
+      "heating": [
+        "Phone Hang While Operation",
+        "Phone Hang While Application",
+        "Phone Slow Operation",
+        "Phone Heating Problem",
+        "Burning Smell",
+        "Over Heating Problem",
+        "Other"
+      ],
+      "cosmetic": [
+        "Dent On Body",
+        "Gap In Fitting",
+        "Deformation/Discoloration",
+        "Scratches On Body",
+        "Phone Damaged",
+        "Phone Liquid Damaged",
+        "Other"
+      ],
+      "other": [
+        "Other"
+      ]
+    };
+
+    // Price Estimates Mapping – maximum values increased by 15%
+    const priceEstimates = {
+      "display": { min: 1200, max: 6900 },
+      "power": { min: 350, max: 1500 },
+      "battery": { min: 600, max: 3220 },
+      "camera": { min: 1250, max: 10580 },
+      "headphones": { min: 250, max: 1500 },
+      "sound": { min: 300, max: 1100 },
+      "connection": { min: 350, max: 1500 },
+      "data": { min: 250, max: 1000 },
+      "touch": { min: 450, max: 3000 },
+      "vibration": { min: 150, max: 900 },
+      "network": { min: 350, max: 1000 },
+      "heating": { min: 300, max: 800 },
+      "cosmetic": { min: 150, max: 1100 },
+      "other": { min: 0, max: 0 }
+    };
+
+    // Get reference to the final price estimate container (below the submit button)
+    const finalPriceEstimate = document.getElementById('final-price-estimate');
+
+    // Brand -> Model Cascading
+    const brandSelect = document.getElementById('brand');
+    const modelSelect = document.getElementById('model');
+    const brandOtherInput = document.getElementById('brand-other');
+    const modelOtherInput = document.getElementById('model-other');
+
+    brandSelect.addEventListener('change', function () {
+      const selectedBrand = this.value;
+      if (selectedBrand === "Other") {
+        brandOtherInput.classList.remove('hidden');
+        modelSelect.innerHTML = `<option value="Other">Other</option>`;
+      } else {
+        brandOtherInput.classList.add('hidden');
+        const models = brandMapping[selectedBrand] || [];
+        let options = `<option value="" disabled selected>Select Model</option>`;
+        models.forEach((model) => {
+          options += `<option value="${model}">${model}</option>`;
+        });
+        modelSelect.innerHTML = options;
+      }
+    });
+
+    modelSelect.addEventListener('change', function () {
+      if (this.value === "Other") {
+        modelOtherInput.classList.remove('hidden');
+      } else {
+        modelOtherInput.classList.add('hidden');
+      }
+    });
+
+    // Main Problem -> Sub Problem Cascading and Price Estimate Display
+    const mainProblemSelect = document.getElementById('main-problem');
+    const subProblemSelect = document.getElementById('sub-problem');
+    const mainProblemOtherInput = document.getElementById('main-problem-other');
+    const subProblemOtherInput = document.getElementById('sub-problem-other');
+
+    mainProblemSelect.addEventListener('change', function () {
+      const selectedProblem = this.value;
+      if (selectedProblem === "other") {
+        mainProblemOtherInput.classList.remove('hidden');
+        subProblemSelect.innerHTML = `<option value="other">Other</option>`;
+        finalPriceEstimate.classList.add('hidden');
+      } else {
+        mainProblemOtherInput.classList.add('hidden');
+        const subProblems = problemMapping[selectedProblem] || [];
+        let options = `<option value="" disabled selected>Select Sub Category</option>`;
+        subProblems.forEach((sub) => {
+          options += `<option value="${sub.toLowerCase().replace(/ /g, '-')}">${sub}</option>`;
+        });
+        subProblemSelect.innerHTML = options;
+
+        // Display estimated price if available for this problem category
+        if (priceEstimates[selectedProblem]) {
+          const priceRange = priceEstimates[selectedProblem];
+          finalPriceEstimate.innerHTML = `Estimated cost for ${selectedProblem} repair: Rs. ${priceRange.min} to Rs. ${priceRange.max} (Contact ReeBootz for final price)`;
+          finalPriceEstimate.classList.remove('hidden');
+        } else {
+          finalPriceEstimate.classList.add('hidden');
+        }
+      }
+    });
+
+    subProblemSelect.addEventListener('change', function () {
+      if (this.value === "other") {
+        subProblemOtherInput.classList.remove('hidden');
+      } else {
+        subProblemOtherInput.classList.add('hidden');
+      }
+    });
+  });
+</script>
+
+
+
+
+
+  
 </body>
 </html>

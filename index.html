@@ -549,21 +549,24 @@
             <select id="brand" name="brand" class="w-full pl-3 bg-transparent border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-yellow-400" required>
               <option value="" disabled selected>Select Brand</option>
               <option value="Samsung">Samsung</option>
-              <option value="Apple">Apple</option>
-              <option value="Xiaomi">Xiaomi</option>
-              <option value="OnePlus">OnePlus</option>
-              <option value="Oppo">Oppo</option>
-              <option value="Vivo">Vivo</option>
-              <option value="Motorola">Motorola</option>
-              <option value="Nokia">Nokia</option>
-              <option value="Google">Google</option>
-              <option value="Huawei">Huawei</option>
-              <option value="LG">LG</option>
-              <option value="Realme">Realme</option>
-              <option value="Infinix">Infinix</option>
-              <option value="Asus">Asus</option>
-              <option value="Micromax">Micromax</option>
-              <option value="Other">Other</option>
+      <option value="Apple">Apple</option>
+      <option value="Xiaomi">Xiaomi</option>
+      <option value="OnePlus">OnePlus</option>
+      <option value="Oppo">Oppo</option>
+      <option value="Vivo">Vivo</option>
+      <option value="Motorola">Motorola</option>
+      <option value="Nokia">Nokia</option>
+      <option value="Google">Google</option>
+      <option value="Huawei">Huawei</option>
+      <option value="Realme">Realme</option>
+      <option value="Infinix">Infinix</option>
+      <option value="Asus">Asus</option>
+      <option value="Micromax">Micromax</option>
+      <option value="Sony">Sony</option>
+      <option value="LG">LG</option>
+      <option value="HTC">HTC</option>
+      <option value="BlackBerry">BlackBerry</option>
+      <option value="Other">Other</option>
             </select>
             <input type="text" id="brand-other" name="brand-other" placeholder="Please specify" class="mt-2 w-full pl-3 border border-gray-300 rounded-lg px-4 py-2 hidden" />
           </div>
@@ -858,22 +861,91 @@
   document.addEventListener("DOMContentLoaded", function () {
     // Expanded Brand Mapping with more brands and models
     const brandMapping = {
-      "Samsung": ["Galaxy S23 Ultra", "Galaxy S23+", "Galaxy S23", "Galaxy Note 20", "Galaxy A53", "Galaxy M33", "Galaxy F22", "Other"],
-      "Apple": ["iPhone 14 Pro Max", "iPhone 14 Pro", "iPhone 14", "iPhone 13 Pro Max", "iPhone 13", "iPhone SE (2022)", "Other"],
-      "Xiaomi": ["Mi 13 Pro", "Mi 13", "Redmi Note 12 Pro", "POCO X5 Pro", "Redmi 10", "Other"],
-      "OnePlus": ["OnePlus 11", "OnePlus 10T", "OnePlus Nord 2", "Other"],
-      "Oppo": ["Oppo Find X5 Pro", "Oppo Reno8 Pro", "Oppo A74", "Other"],
-      "Vivo": ["Vivo X80 Pro", "Vivo V23 Pro", "Vivo Y33s", "Other"],
-      "Motorola": ["Moto G Power (2023)", "Moto G Stylus (2023)", "Moto Edge 30", "Other"],
-      "Nokia": ["Nokia X20", "Nokia G21", "Other"],
-      "Google": ["Pixel 7 Pro", "Pixel 7", "Other"],
-      "Huawei": ["Huawei P50 Pro", "Huawei Mate 40 Pro", "Other"],
-      "LG": ["LG Velvet", "Other"],
-      "Realme": ["Realme GT 2 Pro", "Realme 9 Pro+", "Other"],
-      "Infinix": ["Infinix Note 12", "Other"],
-      "Asus": ["Asus ROG Phone 6", "Other"],
-      "Micromax": ["Micromax IN Note 1", "Other"]
-    };
+  "Samsung": [
+    "Galaxy S23 Ultra", "Galaxy S23+", "Galaxy S23", "Galaxy S22 Ultra", "Galaxy S22+", "Galaxy S22",
+    "Galaxy S21 Ultra", "Galaxy S21+", "Galaxy S21", "Galaxy S20 Ultra", "Galaxy S20+", "Galaxy S20",
+    "Galaxy S10+", "Galaxy S10", "Galaxy S9+", "Galaxy S9", "Galaxy S8+", "Galaxy S8",
+    "Galaxy Note 20 Ultra", "Galaxy Note 20", "Galaxy Note 10+", "Galaxy Note 10", "Galaxy Note 9", "Galaxy Note 8",
+    "Galaxy A73", "Galaxy A53", "Galaxy A33", "Galaxy A13", "Galaxy A72", "Galaxy A52", "Galaxy A32", "Galaxy A12",
+    "Galaxy M53", "Galaxy M33", "Galaxy M23", "Galaxy M13", "Galaxy M62", "Galaxy M52", "Galaxy M42", "Galaxy M32",
+    "Galaxy F62", "Galaxy F42", "Galaxy F22", "Galaxy F12", "Galaxy Z Fold 4", "Galaxy Z Fold 3", "Galaxy Z Fold 2",
+    "Galaxy Z Flip 4", "Galaxy Z Flip 3", "Galaxy Z Flip", "Other"
+  ],
+  "Apple": [
+    "iPhone 15 Pro Max", "iPhone 15 Pro", "iPhone 15 Plus", "iPhone 15", "iPhone 14 Pro Max", "iPhone 14 Pro", "iPhone 14 Plus", "iPhone 14",
+    "iPhone 13 Pro Max", "iPhone 13 Pro", "iPhone 13", "iPhone 13 Mini", "iPhone 12 Pro Max", "iPhone 12 Pro", "iPhone 12", "iPhone 12 Mini",
+    "iPhone 11 Pro Max", "iPhone 11 Pro", "iPhone 11", "iPhone XS Max", "iPhone XS", "iPhone XR", "iPhone X", "iPhone 8 Plus", "iPhone 8",
+    "iPhone 7 Plus", "iPhone 7", "iPhone 6s Plus", "iPhone 6s", "iPhone SE (2022)", "iPhone SE (2020)", "iPhone SE (2016)", "Other"
+  ],
+  "Xiaomi": [
+    "Mi 13 Pro", "Mi 13", "Mi 12 Pro", "Mi 12", "Mi 11 Ultra", "Mi 11", "Mi 10 Pro", "Mi 10", "Mi 9", "Mi 8", "Mi 6", "Mi 5",
+    "Redmi Note 12 Pro", "Redmi Note 11 Pro", "Redmi Note 10 Pro", "Redmi Note 9 Pro", "Redmi Note 8 Pro", "Redmi Note 7 Pro",
+    "Redmi 12", "Redmi 11", "Redmi 10", "Redmi 9", "Redmi 8", "Redmi 7", "Redmi 6", "Redmi 5",
+    "POCO X5 Pro", "POCO X4 Pro", "POCO X3 Pro", "POCO F4", "POCO F3", "POCO F2 Pro", "POCO F1", "Other"
+  ],
+  "OnePlus": [
+    "OnePlus 11", "OnePlus 10T", "OnePlus 10 Pro", "OnePlus 9 Pro", "OnePlus 9", "OnePlus 8T", "OnePlus 8 Pro", "OnePlus 8",
+    "OnePlus 7T Pro", "OnePlus 7T", "OnePlus 7 Pro", "OnePlus 7", "OnePlus 6T", "OnePlus 6", "OnePlus 5T", "OnePlus 5",
+    "OnePlus Nord 2", "OnePlus Nord CE", "OnePlus Nord", "Other"
+  ],
+  "Oppo": [
+    "Oppo Find X5 Pro", "Oppo Find X3 Pro", "Oppo Find X2 Pro", "Oppo Find X", "Oppo Reno8 Pro", "Oppo Reno7 Pro", "Oppo Reno6 Pro",
+    "Oppo Reno5 Pro", "Oppo Reno4 Pro", "Oppo Reno3 Pro", "Oppo A96", "Oppo A94", "Oppo A77", "Oppo A76", "Oppo A74", "Oppo A57",
+    "Oppo A54", "Oppo A53", "Oppo A16", "Oppo A15", "Other"
+  ],
+  "Vivo": [
+    "Vivo X80 Pro", "Vivo X70 Pro", "Vivo X60 Pro", "Vivo X50 Pro", "Vivo V23 Pro", "Vivo V21", "Vivo V20", "Vivo V17",
+    "Vivo Y33s", "Vivo Y21", "Vivo Y20", "Vivo Y19", "Vivo Y16", "Vivo Y15", "Vivo Y12", "Vivo Y11", "Other"
+  ],
+  "Motorola": [
+    "Moto G Power (2023)", "Moto G Stylus (2023)", "Moto G 5G (2023)", "Moto G82", "Moto G72", "Moto G62", "Moto G52",
+    "Moto G42", "Moto G32", "Moto G22", "Moto Edge 30 Ultra", "Moto Edge 30 Pro", "Moto Edge 30", "Moto Edge 20 Pro",
+    "Moto Edge 20", "Moto Edge", "Moto One Fusion+", "Moto One Vision", "Moto One Action", "Other"
+  ],
+  "Nokia": [
+    "Nokia X20", "Nokia X10", "Nokia G60", "Nokia G50", "Nokia G21", "Nokia G20", "Nokia 8.3", "Nokia 7.2", "Nokia 6.2",
+    "Nokia 5.4", "Nokia 5.3", "Nokia 3.4", "Nokia 2.4", "Nokia 1.4", "Other"
+  ],
+  "Google": [
+    "Pixel 7 Pro", "Pixel 7", "Pixel 6 Pro", "Pixel 6", "Pixel 5", "Pixel 4a", "Pixel 4 XL", "Pixel 4", "Pixel 3a",
+    "Pixel 3 XL", "Pixel 3", "Pixel 2 XL", "Pixel 2", "Pixel XL", "Pixel", "Other"
+  ],
+  "Huawei": [
+    "Huawei P50 Pro", "Huawei P40 Pro", "Huawei P30 Pro", "Huawei P20 Pro", "Huawei Mate 50 Pro", "Huawei Mate 40 Pro",
+    "Huawei Mate 30 Pro", "Huawei Mate 20 Pro", "Huawei Nova 9", "Huawei Nova 8", "Huawei Nova 7", "Huawei Nova 5T", "Other"
+  ],
+  "Realme": [
+    "Realme GT 2 Pro", "Realme GT Neo 3", "Realme GT Neo 2", "Realme GT Master Edition", "Realme 9 Pro+", "Realme 9 Pro",
+    "Realme 8 Pro", "Realme 7 Pro", "Realme 6 Pro", "Realme Narzo 50A", "Realme Narzo 30 Pro", "Realme Narzo 20", "Other"
+  ],
+  "Infinix": [
+    "Infinix Zero Ultra", "Infinix Zero X Pro", "Infinix Note 12", "Infinix Note 11 Pro", "Infinix Note 10 Pro",
+    "Infinix Hot 12", "Infinix Hot 11", "Infinix Hot 10", "Infinix Smart 6", "Infinix Smart 5", "Other"
+  ],
+  "Asus": [
+    "Asus ROG Phone 6", "Asus ROG Phone 5", "Asus ROG Phone 3", "Asus Zenfone 9", "Asus Zenfone 8", "Asus Zenfone 7 Pro",
+    "Asus Zenfone 6", "Asus Zenfone 5", "Asus Zenfone Max Pro M2", "Asus Zenfone Max M2", "Other"
+  ],
+  "Micromax": [
+    "Micromax IN Note 2", "Micromax IN Note 1", "Micromax IN 2b", "Micromax IN 1b", "Micromax IN 1", "Micromax Canvas Infinity",
+    "Micromax Canvas Fire", "Micromax Canvas Spark", "Other"
+  ],
+  "Sony": [
+    "Xperia 1 IV", "Xperia 5 IV", "Xperia 10 IV", "Xperia 1 III", "Xperia 5 III", "Xperia 10 III", "Xperia 1 II", "Xperia 5 II",
+    "Xperia 10 II", "Xperia 1", "Xperia 5", "Xperia 10", "Xperia XZ3", "Xperia XZ2", "Other"
+  ],
+  "LG": [
+    "LG Velvet", "LG Wing", "LG V60 ThinQ", "LG G8 ThinQ", "LG G7 ThinQ", "LG V50 ThinQ", "LG V40 ThinQ", "LG V30", "LG G6",
+    "LG Q92", "LG Q70", "LG Q60", "Other"
+  ],
+  "HTC": [
+    "HTC U23 Pro", "HTC U20", "HTC U12+", "HTC U11", "HTC 10", "HTC One M9", "HTC One M8", "HTC Desire 22 Pro", "Other"
+  ],
+  "BlackBerry": [
+    "BlackBerry Key2", "BlackBerry Key2 LE", "BlackBerry KeyOne", "BlackBerry Motion", "BlackBerry DTEK60", "BlackBerry DTEK50", "Other"
+  ],
+  "Other": ["Other"]
+};
 
     // Problem Category Mapping
     const problemMapping = {
